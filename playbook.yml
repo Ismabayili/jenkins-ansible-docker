@@ -1,7 +1,13 @@
-- name: install wartest
+- name: install wordpress
   hosts: all
   become: yes
-  vars:
-    ansible_python_interpreter: /usr/bin/python3.10
   roles:
-    - wartest
+    - wordpress
+    
+#- name: install wartest
+#  hosts: all
+# become: yes
+#  vars:
+#   ansible_python_interpreter: /usr/bin/python3.10
+# roles:
+#   - wartest
