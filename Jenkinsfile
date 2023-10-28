@@ -11,11 +11,11 @@ node {
           docker.build("$IMAGE",  '.')
     }
     stage('Build - Test') {
-            img.withRun("--name run-$BUILD_ID -p 8081:8080") { c ->
+            img.withRun("--name run-$BUILD_ID -p 81:80") { c ->
             sh 'docker ps'
             sh 'netstat -ntaup'
             sh 'sleep 30s'
-            sh 'curl 127.0.0.1:8081'
+            sh 'curl 127.0.0.1:81'
             sh 'docker ps'
           }
     }
