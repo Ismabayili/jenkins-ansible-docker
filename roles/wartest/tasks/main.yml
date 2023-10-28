@@ -2,7 +2,7 @@
   docker_container:
     name: wordpress
     image: "{{ image }}"
-    ports: 80:80
+    ports: 81:80
     state: started
     
 #- name: install pip
