@@ -37,6 +37,5 @@ node {
           extras: "--extra-vars 'image=$IMAGE'"
       )
     }
-
 }
 
