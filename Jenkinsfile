@@ -34,8 +34,8 @@ node {
           become: true,
           playbook: 'playbook.yml',
          inventory: '${HOST},',
-          extras: "--extra-vars 'image=$IMAGE'"
+         #extras: "--extra-vars 'image=$IMAGE'"
+          extras: "--user=jenkins --extra-vars 'image=${IMAGE} ansible_sudo_pass=Isma@2023'"
       )
     }
 }
-
