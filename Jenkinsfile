@@ -1,5 +1,5 @@
 node {
-   def registryProjet='registry.gitlab.com/jenkins5753330/wartest'
+   def registryProjet='registry.gitlab.com/jenkins5753330/wordpress'
    def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
     stage('Build - Clone') {
           git 'https://github.com/Ismabayili/war-build-docker.git'
@@ -20,7 +20,7 @@ node {
           }
     }
     stage('Build - Push') {
-          docker.withRegistry('https://registry.gitlab.com/jenkins5753330', 'reg1') {
+          docker.withRegistry('https://registry.gitlab.com/jenkins5753330/wordpress', 'reg1') {
               img.push 'latest'
               img.push()
           }
